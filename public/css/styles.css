@@ -1,0 +1,419 @@
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+
+/*
+ * Base structure
+ */
+
+body {
+  /* text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5); */
+  /* box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5); */
+  background-image: url('../assets/japan-bg.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  overflow:hidden;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow-y: scroll;
+}
+
+.cover-container {
+  max-width: 42em;
+  
+}
+
+/*
+ * Header
+ */
+
+.blog-header{
+    padding-right: 15px !important;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+
+main {
+    display: block;
+}
+
+.px-3 {
+    padding-right: 1rem!important;
+    padding-left: 1rem!important;
+}
+
+
+
+.container{
+    padding: 20px 70px;
+    color:#fff;
+}
+
+.current-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.date-container{
+    font-weight: 100;
+}
+.date-container .time{
+    font-size: 15px;
+}
+
+.date-container #am-pm{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.date-container .date{
+    font-size: 30px;
+}
+
+.place-container{
+    text-align: end;
+}
+
+.place-container .time-zone{
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.place-container .country{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.current-info .others{
+    display: flex;
+    flex-direction: column;
+    background: rgba(24,24,27, 0.6);
+    padding:20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid #eee;
+}
+
+.current-info .others .weather-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.future-forecast{
+    background: rgba(24,24,27,0.8);
+    padding: 25px;
+    /* position: fixed; */
+    bottom: 0;
+    display: flex;
+    color:white;
+    width: 100%;
+    align-items: center;
+    justify-content: left;
+    overflow-y: hidden;
+}
+
+.future-forecast .today{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding:15px;
+    padding-right: 40px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2)
+}
+
+.future-forecast .today .day{
+    padding: 5px 15px;
+    background: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.future-forecast .today .temp{
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.future-forecast .weather-forecast{
+    display: flex;
+}
+
+.weather-forecast .weather-forecast-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2)
+}
+
+.weather-forecast .weather-forecast-item .day{
+    padding: 5px 15px;
+    background: #3C3C44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.weather-forecast .weather-forecast-item .temp{
+    font-weight: 100;
+    font-size: 12px;
+}
+
+
+@media only screen and  (max-width:730px){
+    
+    .container{
+        padding: 20px;
+    }
+    
+    .future-forecast{
+        justify-content: start;
+        align-items: none;
+        overflow-y: scroll;
+    }
+
+    .future-forecast .today .temp{
+        font-size: 16px;
+    }
+
+    .date-container .time{
+        font-size: 20px;
+    }
+
+    .date-container #am-pm{
+        font-size: 20px;
+    }
+
+    .date-container .date{
+        font-size: 20px;
+    }
+
+    .place-container{
+        text-align: end;
+        margin-top: 15px;
+    }
+
+    .place-container .time-zone{
+        font-size: 20px;
+    }
+
+    .current-info .others{
+        padding: 12px;
+    }
+
+    .current-info .others .weather-item{
+        font-size: 14px;
+    }
+
+}
+
+@media (min-width: 1400px){
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1320px !important;
+}
+
+@media only screen and (max-width: 1400px){
+    .future-forecast{
+        justify-content: start;
+        align-items: none;
+        overflow-x: scroll;
+    }
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .marketing h2 {
+    font-weight: 400;
+  }
+  /* rtl:begin:ignore */
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+  /* rtl:end:ignore */
+
+  /* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  }
+  
+  /* Thin out the marketing headings */
+  .featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    /* rtl:remove */
+    letter-spacing: -.05rem;
+  }
+  
+  
+  /* RESPONSIVE CSS
+  -------------------------------------------------- */
+  
+  @media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+  
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+  }
+  
+}
+
+/* Home  */
+
+.overlay{
+    position: absolute !important;
+    top: 0 !important;
+    left:0 !important;
+    background: #000;
+    opacity: 0.2;
+    height: auto;
+    width: 100%;
+}
+.cover-box{
+    top:30% !important;
+    left: 50% !important;
+    position: absolute !important;
+    transform: translate(-50%, -50%) !important;
+    color:black !important;
+}
+.search-box{
+    top:40% !important;
+    left: 50% !important;
+    position: absolute !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.cover-extra-box{
+    top:50% !important;
+    left: 50% !important;
+    position: absolute !important;
+    transform: translate(-50%, -50%) !important;
+    color:black !important;
+}
+
+.btn.btn-search{
+    border-radius: 1px;
+    height: 38px;
+    background: #03a3b2;
+    color:#fff;
+}
+.search-input {
+    outline: none;
+    -webkit-box-shadow:none;
+    box-shadow: none;
+}
+
+.search-place{
+    
+    left: 50% !important;
+    position: relative !important;
+    transform: translate(-50%, -50%) !important;
+    margin-top: 20px !important;
+    padding-right: 0px !important;
+
+    
+}
+
+.pre-btn, 
+.nxt-btn{
+    border:none;
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg,rgba(255,255,255,0) 0%, #fff 100%);
+    cursor:pointer;
+    z-index: 9;
+}
+
+.pre-btn{
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.nxt-btn{
+    right: 0;
+}
+
+.future-forecast::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+.future-forecast::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+.future-forecast::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
+  .d-flex{
+      display: flex;
+  }
+
+  .featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  }
+  .large-imge{
+    padding: 28px !important;
+  }
+
+
+
